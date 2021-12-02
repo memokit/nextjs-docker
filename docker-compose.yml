@@ -5,10 +5,7 @@ services:
     build: ./
 
   nginx: 
-    image: nginx:1.21.4-alpine
-    restart: always
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    build: ./nginx
     ports:
       - "${NGINX}:80"
 
